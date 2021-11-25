@@ -1,5 +1,6 @@
 import UseContextComponent from "./components/useContext.component";
 import UseEffectComponent from "./components/useEffect.component";
+import UseReducerComponent from "./components/useReducer.component";
 import UseStateComponent from "./components/useState.component";
 import UseContextProvider from "./context/provider";
 
@@ -14,6 +15,8 @@ function App() {
       <UseContextProvider>
         <UseContextComponent />
       </UseContextProvider>
+      <h1>UseReducer</h1>
+      <UseReducerComponent />
     </div>
   );
 }
