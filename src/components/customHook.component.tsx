@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { UserInterface } from "../context/store";
 import useFetchData from "../hooks/useFetchData";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 }
 
 const CustomHookComponent = (props: Props) => {
-  const { data, done, error } = useFetchData("/users.json");
+  const { data, done, error } = useFetchData<UserInterface[]>("/users.json");
 
   return (
     <div>

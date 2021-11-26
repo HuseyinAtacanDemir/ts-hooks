@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
-import { UserInterface } from "../context/store";
 
-const useFetchData = (
+const useFetchData = <Payload>(
   url: string
 ): {
-  data: UserInterface[] | null;
+  data: Payload | null;
   done: boolean;
   error: boolean;
 } => {
-  const [data, setData] = useState<UserInterface[] | null>(null);
+  const [data, setData] = useState<Payload | null>(null);
   const [done, setDone] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((d) => {
+      .then((d: Payload) => {
         setData(d);
         setDone(true);
       })
