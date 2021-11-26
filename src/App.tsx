@@ -1,3 +1,4 @@
+import CustomHookComponent from "./components/customHook.component";
 import UseContextComponent from "./components/useContext.component";
 import UseEffectComponent from "./components/useEffect.component";
 import UseReducerComponent from "./components/useReducer.component";
@@ -20,6 +21,8 @@ function App() {
       <UseReducerComponent />
       <h1>UseRef</h1>
       <UseRefComponent />
+      <h1>Custom Hooks</h1>
+      <CustomHookComponent />
     </div>
   );
 }
